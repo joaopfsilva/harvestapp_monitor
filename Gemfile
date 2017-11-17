@@ -9,6 +9,8 @@ gem 'puma'
 gem 'rails', '5.0.6'
 gem 'redis'
 
+gem 'omniauth-facebook'
+
 gem 'harvested'
 
 gem 'autoprefixer-rails'
