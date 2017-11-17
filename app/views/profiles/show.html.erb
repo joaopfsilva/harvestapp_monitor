@@ -1,0 +1,24 @@
+<div class="container" style="margin-top: 50px">	
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+			<% @harvest.projects.all.each_with_index do |proj, index| %>
+		   		<div class="product">
+					<div class='product-upvote'>
+						<div class="product-arrow"></div>
+					    <div class='product-count'><%= index %></div>
+					</div>
+					<div class='product-body'>
+						<h3><%= proj.name %></h3>
+						<p><%= proj.starts_on %> - <%= proj.ends_on %> </p>
+						<p><%= proj.estimate %> hours </p>
+						<p><%= proj.hourly_rate %> €/h </p>
+					</div>
+		  		    <ul class="list-inline product-controls hidden-sm hidden-xs">
+		    			<li><%= proj.hourly_rate * proj.estimate %> <i class="fa fa-eur"></i></li>
+		  		  	</ul>
+				</div>
+		 	<% end %>
+		</div>
+	</div>
+</div>
+<!-- <h1><%#= @harvest.projects.all %></h1> -->
